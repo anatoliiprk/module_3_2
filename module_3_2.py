@@ -1,21 +1,21 @@
 def send_email (message, recipient, *, sender='university.help@gmail.com'):
     check = ['.ru', '.com', '.net',]
     a = len(check)
+    b = 0
+    c = 0
     flag_1 = False
     flag_2 = False
     flag_3 = False
-    c = 0
-    d = 0
     if recipient.find('@') != -1:
         flag_1 = True
     for i in range(a):
-        c = recipient.find(check[i])
-        if c != -1:
+        b = recipient.find(check[i])
+        if b != -1:
             flag_2 = True
             break
     for i in range(a):
-        d = sender.find(check[i])
-        if d != -1:
+        c = sender.find(check[i])
+        if c != -1:
             flag_3 = True
             break
     if flag_1 == False or flag_2 == False or flag_3 == False:
